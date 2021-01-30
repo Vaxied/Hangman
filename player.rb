@@ -2,7 +2,7 @@ module Hangman
   # class for player(s)
   class Player
 
-    attr_accessor :tries
+    attr_accessor :tries, :name
 
     def initialize(input)
       @name = input[:name]
@@ -29,6 +29,10 @@ module Hangman
         player = create_player
         Hangman::Game.new(player).play
         # TO DO
+      when 2
+        # Load a saved game TO DO
+        files = Dir.glob '*savefile.txt'
+        p files
       else
         # Exit
         exit(0)

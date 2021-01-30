@@ -1,15 +1,10 @@
 module Hangman
   class Board
 
-    private
-    
     attr_accessor :row, :game
-
-    public
 
     def initialize(game, _input = {})
       @game = game
-      @tries = 7
       @row = []
     end
 
